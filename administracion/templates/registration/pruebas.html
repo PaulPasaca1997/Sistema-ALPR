@@ -1,0 +1,23 @@
+<!--{% extends 'base.html' %}
+{%load crispy_forms_tags%}
+
+
+{% block content %}
+
+<form action="" method="post" autocomplet="off">
+<h1 class="display-5 fw-bold">Registro Empleado</h1>
+<p class="col-md-8 fs-4">Se debe registrar un usuario</p>
+      {% csrf_token %}
+      {{form.cedula | as_crispy_field}}
+      {{form.nombre | as_crispy_field}}
+      {{form.apellido | as_crispy_field}}
+      {{form.email | as_crispy_field}}
+      {{form.rol | as_crispy_field}}
+
+      <button type="submit" class="btn btn-success"> <i class="fas fa-database"></i> Registrar</button>
+
+
+</form>
+
+{% endblock content %}
+-->

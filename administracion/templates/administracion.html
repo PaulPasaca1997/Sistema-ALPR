@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<!--
+<div class="container px-4 py-5" >
+  
+  <div class="b-example-divider"></div>
+
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Pagina del Administrador</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2><i class="fa fa-group"></i> Registro de Usuario </h2>
+          <p>Permite al administrador registrar un nuevo usuario en el sistema.</p>
+          <a href="{%url 'registrar'%}" class="btn btn-primary">
+            Acceder >>
+          </a>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2><i class='fas fa-car'></i> Registro de Placas</h2>
+          <p>Permite al administrador registrar una nueva placa vehicular en el sistema.</p>
+          <a href="{%url 'registroplaca'%}" class="btn btn-primary">
+            Acceder >>
+          </a>
+        </div>
+      </div>
+      
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2><i class='fas fa-file-contract'></i> Revisar Historial </h2>
+          <p>Permite al administrador revisar el historial de las entradas y salidas de los vehículos.</p>
+          <a href="#" class="btn btn-primary">
+            Acceder >>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div><div class="b-example-divider"></div>
+
+
+  
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2><i class="fa fa-file-pdf-o"></i> Crear Reporte </h2>
+          <p>Permite al administrador crear un reporte ya sea del historial o de la estadística.</p>
+          <a href="{%url 'reporte'%}" class="btn btn-primary">
+            Acceder >>
+          </a>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2><i class='fas fa-chart-bar'></i> Ver Estadistica </h2>
+          <p>Permite al administrador ver la estadística generada de las entradas, salidas o cantidad de vehículos.</p>
+          <a href="#" class="btn btn-primary">
+            Acceder >>
+          </a>
+        </div>
+      </div>
+
+      
+
+      
+    </div>
+  </div>
+
+
+
+</div>
+-->
+
+
+
+<!--service start-->
+<section  class="service">
+  <div class="container">
+    <div class="service-details">
+      <div class="section-header text-center">
+        <h2>administración</h2>
+        <p>
+          Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        </p>
+      </div><!--/.section-header-->
+      <div class="service-content-one">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service1.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="{%url 'registrar'%}"> Registro de Usuario</a>
+                </h2>
+                <p>
+                  Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service2.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="{%url 'registroplaca'%}"> Registro de Placas</a>
+                </h2>
+                <p>
+                  Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service3.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="#">Revisar Historial</a>
+                </h2>
+                <p>
+                  Permite al administrador registrar un nuevo usuario en el sistema.  
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+        </div><!--/.row-->
+      </div><!--/.service-content-one-->
+      <div class="service-content-two">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service4.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="{%url 'reporte'%}">Crear Reporte</a>
+                </h2>
+                <p>
+                  Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service5.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="#">Ver Estadística</a>
+                </h2>
+                <p>
+                  Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+          <div class="col-sm-4 col-xs-12">
+            <div class="service-single text-center">
+              <div class="service-img">
+                <img src="../static/assets/images/service/service6.png" alt="image of service" />
+              </div><!--/.service-img-->
+              <div class="service-txt">
+                <h2>
+                  <a href="#">Camara en tiempo real</a>
+                </h2>
+                <p>
+                  Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
+                </p>
+                <a href="#" class="service-btn">
+                  learn more
+                </a>
+              </div><!--/.service-txt-->
+            </div><!--/.service-single-->
+          </div><!--/.col-->
+        </div><!--/.row-->
+      </div><!--/.service-content-two-->
+    </div><!--/.service-details-->
+  </div><!--/.container-->
+  
+</section><!--/.service-->
+<!--service end-->
+
+
+{% endblock content %}

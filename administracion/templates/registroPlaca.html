@@ -1,0 +1,68 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+<h5 id="titulo" class="card-title">Registro Placa</h5>
+<form class="row g-3" method="POST">
+	{% csrf_token %}
+	
+	<!-- 	<div class="row align-items-md-stretch">
+	<div class="col-md-6">
+	  <label for="inputEmail4" class="form-label">Placa</label>
+	  <input type="text" name="placa" class="form-control" id="" placeholder="Placa">
+	</div>
+
+	<div class="col-md-6">
+	  <label for="inputPassword4" class="form-label">Marca</label>
+	  <input type="text" name="marca" class="form-control" id="" placeholder="Marca">
+	</div>
+	</div>
+
+-->
+<div class="row align-items-md-stretch">
+
+	<div class="col-md-6">
+		<div class="h-100 p-5 bg-light border rounded-3">
+		  <h2>Buscar Datos De Usuario </h2>
+		  <label for="inputPassword4" class="form-label">Cedula</label>
+		  <input type="number" name="cedula" class="form-control" id="" placeholder="Cedula">
+		  
+		  <label for="inputEmail4" class="form-label">Nombres</label>
+		  <input type="text" name="first_name" class="form-control" id="" placeholder="Nombres">
+
+		  <label for="inputPassword4" class="form-label">Apellidos</label>
+		  <input type="text" name="last_name" class="form-control" id="" placeholder="Apellidos">
+
+
+  
+		</div>
+	  </div>
+
+	<div class="col-md-6">
+	  <div class="h-100 p-5 bg-light border rounded-3">
+		<h2> Registrar Una Nueva Placa</h2>
+		<label for="inputEmail4" class="form-label">Placa</label>
+	  	<input type="text" name="placa" class="form-control" id="" placeholder="Placa">
+		
+		<label for="inputEmail4" class="form-label">Marca</label>
+	  	<input type="text" name="marca" class="form-control" id="" placeholder="Marca">
+	  </div>
+	</div>
+	
+  </div>
+
+	
+	
+	
+	<div class="col-12" id="registro">
+	  <button type="submit"  class="btn btn-primary btn-lg">Registrar</button>
+	</div>
+
+  </form>
+  {{form.errors}}
+
+{% endblock content %}

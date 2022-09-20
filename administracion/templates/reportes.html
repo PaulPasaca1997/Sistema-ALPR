@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+<h5 id="titulo" class="card-title">Reportes</h5>
+<body>
+    <h2> Placas </h2>
+
+    <table border = "1">
+        <thead>
+            <th>Placa</th>
+            <th>Marca </th>
+        </thead>
+        <tbody>
+            {% for item in placa %}
+            <tr>
+                <td>{{item.placa}}</td> 
+                <td>{{item.marca}}</td> 
+            
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+
+{% endblock content %}

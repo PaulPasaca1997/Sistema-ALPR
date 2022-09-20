@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags%}
+
+
+{% block content %}
+
+<form action="" method="post" autocomplet="off">
+    
+      {% csrf_token %}
+      {{form.placa | as_crispy_field}}
+      {{form.marca | as_crispy_field}}
+
+      <button type="submit" class="btn btn-success"> <i class="fas fa-database"></i> Registrar</button>
+
+
+</form>
+{% endblock content %}

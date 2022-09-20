@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+<h5 id="titulo" class="card-title">Special title treatment</h5>
+<form class="row g-3" method="POST">
+	{% csrf_token %}
+	<div class="col-12">
+		<label for="inputAddress" class="form-label">Cédula</label>
+		<input type="number" class="form-control" id="" placeholder="Cédula">
+		{{form.username}}
+	</div>
+
+	<div class="col-md-6">
+	  <label for="inputEmail4" class="form-label">Nombres</label>
+	  <input type="text" class="form-control" id="">
+	  {{form.first_name}}
+	</div>
+
+	<div class="col-md-6">
+	  <label for="inputPassword4" class="form-label">Apellidos</label>
+	  <input type="text" class="form-control" id="">
+	  {{form.last_name}}
+	</div>
+	
+	<div class="col-12">
+	  <label for="inputAddress" class="form-label">Email</label>
+	  <input type="email" class="form-control" id="" placeholder="">
+	  {{form.email}}
+	</div>
+
+	<div class="col-md-6">
+		<label for="inputPassword4" class="form-label">Contraseña</label>
+		<input type="text" class="form-control" id="">
+		{{form.password1}}
+	  </div>
+	
+	  
+	  <div class="col-md-6">
+		<label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
+		<input type="text" class="form-control" id="">
+		{{form.password2}}
+	  </div>
+	  
+
+	
+	<div class="col-12" id="registro">
+	  <button type="submit"  class="btn btn-primary btn-lg">Registrar</button>
+	</div>
+
+  </form>
+  {{form.errors}}
+
+{% endblock content %}
+

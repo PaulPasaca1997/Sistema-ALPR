@@ -1,0 +1,101 @@
+
+
+{% extends 'layout.html' %} {% block body %}
+
+
+<div class="container">
+  
+  <br />
+
+
+  <form action="#" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="input-group">
+      <input type="file" id= "direccion" class="form-control" name="image_name" required />
+      <input type="submit" value="UPLOAD" class="btn btn-outline-secondary" />
+    </div>
+  </form>
+</div>
+
+<script > 
+    document.getElementById("direccion").value('/static/upload/prueba.jpg')
+
+</script>
+
+{% if upload %}
+
+
+<div class="container">
+  <br />
+  <table>
+    <tr>
+      <td>
+        <img
+          class="rounded float-left img-fluid"
+          src="/static/upload/{{upload_image}}"
+          alt=""
+        />
+      </td>
+      <td>
+        <img
+          class="rounded float-right img-fluid"
+          src="/static/predict/{{upload_image}}"
+          alt=""
+        />
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table style="border: solid black; width: 100%">
+    <tr style="border: solid black">
+      <th>CROPPEED LICENCE PLATE IMAGE</th>
+      <th>TEXT</th>
+    </tr>
+    <tr style="border: solid black">
+      <td>
+        <img class="img-fluid" src="/static/roi/{{ upload_image }}" alt="" />
+      </td>
+      <td style="background-color: #c1dce0">
+        <h1 class="display-8">{{ text }}</h1>
+      </td>
+    </tr>
+  </table>
+</div>
+
+{% endif %} {% endblock %}
+
+
+
+<!--
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="myfile">
+      <button type="submit">Upload</button>
+    </form>
+  
+    {% if uploaded_file_url %}
+      <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% endif %}
+  
+    <p><a href="{% url 'home' %}">Return to home</a></p>
+  
+    
+    <script src="" async defer></script>
+  </body>
+</html>
+-->
+  

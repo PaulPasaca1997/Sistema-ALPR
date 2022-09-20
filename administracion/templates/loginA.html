@@ -1,0 +1,37 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+<h5 id="titulo" class="card-title">Inicio Sesion</h5>
+
+
+<form method="POST" >
+	{% csrf_token %}
+	<div class="col-md-12" >
+		<label for="inputAddress" class="form-label">Nombre de Usuario</label>
+		<input type="text" name="username" class="form-control" id="" placeholder="Nombre de Usuario">
+	</div>
+
+
+	<div class="col-md-12">
+		<label for="inputPassword4" class="form-label">Contraseña</label>
+		<input type="password" name="password1"  class="form-control" id="" placeholder="Contraseña">
+	  </div>
+	
+	
+	<div class="col-12" id="registro">
+	  <button type="submit"  class="btn btn-primary btn-lg">Registrar</button>
+	</div>
+
+  </form>
+  {% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}	
+
+
+{% endblock content %}
+ 
